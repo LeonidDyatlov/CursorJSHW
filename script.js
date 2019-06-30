@@ -4,10 +4,7 @@ function convert(amount)
 }
 function reverse(str)
 {
-    let splitStr=str.split("");
-    let reverseArr=splitStr.reverse();
-    let joinArr=reverseArr.join("");
-    return joinArr;
+    return str.split("").reverse().join("");
 }
 function printStairs(n)
 {
@@ -20,36 +17,27 @@ function printStairs(n)
 function sumRange(start,end)
 {
     let sum=0;
-    for(let n=start;n<=end;n++)
+    for(let i = start; i <= end; i++)
     {
-        sum+=n;
+        sum+=i;
     }
     return sum;
 }
 function min(a,b,c)
 {
-    if(a<b && a<c)
-    {
-        return a;
-    }
-    else if(b<a && b<c)
-    {
-        return b;
-    }
-    else
-    {
-        return c;
-    }
+    let min=0;
+    min=(a < b && a < c) ? a : (b < a && b < c ) ? b : c;
+    return min;
 }
 function printPyramid(n)
 {
     let num=1;
-    for(let x=n;x>0;x--)
+    for(let i = n; i > 0; i--)
     {   
         const str="#";
         const space=" ";
-        console.log(space.repeat(x-1)+str.repeat(num));
-        num+=2;
+        console.log(space.repeat(i - 1) + str.repeat(num));
+        num+= 2;
     }
 }
 function firstAndLastToUpper(str)
