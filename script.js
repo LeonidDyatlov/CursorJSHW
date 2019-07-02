@@ -1,6 +1,7 @@
 function convert(amount)
 {
-    return amount*8;
+    const usd=8;
+    return amount*usd;
 }
 function reverse(str)
 {
@@ -10,7 +11,7 @@ function printStairs(n)
 {
     for(let x=0;x<=n;x++)
     {
-        let str="#";
+        const str="#";
         console.log(str.repeat(x));
     }
 }
@@ -42,21 +43,17 @@ function printPyramid(n)
 }
 function firstAndLastToUpper(str)
 {
-    let first=str[0].toUpperCase();
-    let last=str[(str.length)-1].toUpperCase();
-    console.log(first+str.slice(1,(str.length-1))+last);
+    const first=str[0].toUpperCase();
+    const last=str[(str.length)-1].toUpperCase();
+    return first+str.slice(1,(str.length-1))+last;
 }
 function cursorCheck(str)
 {
     let words=["ironman","cursor","ostap"];
     for(n=0;n<=words.length-1;n++)
-    if((str.toLowerCase().indexOf(words[n]))>=0)
-    {
-        return true;
-    }
-    else{
-        return false;
-    }
+    return str.toLowerCase().indexOf(words[n]) >= 0;
+
+
 }
 
 function toUppercase(str)
@@ -68,7 +65,7 @@ function toUppercase(str)
     num=str.charCodeAt(n);
     newstr+=String.fromCharCode(num-32);
     }
-    return console.log(newstr);
+    return newstr;
     
 }
 function removeDuplicationLetters(str)
@@ -90,7 +87,7 @@ function removeDuplicationLetters(str)
             ans+=mas[x];
         }
     }
-    return console.log(ans);
+    return ans;
 }
 function fibonacci(n){
 
